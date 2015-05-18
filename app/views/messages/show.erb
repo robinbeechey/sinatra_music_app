@@ -1,0 +1,27 @@
+
+<p>
+  Author: <%= @message.author %>
+</p>
+
+<p>
+  <%= @message.content  %>
+</p>
+
+<p>
+  <%= @message.url  %>
+</p>
+
+<p>
+   <%= @message.created_at %>
+</p>
+
+<p>
+   Other messages from <%= @message.author %>
+</p>
+
+<% other_message = @message.other_messages(@message.author) %>
+<%= other_message%>
+
+
+<hr/>
+<a href="/messages">Back to All Messages</a>
