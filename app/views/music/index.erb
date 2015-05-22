@@ -1,0 +1,13 @@
+
+<a href="/"><h3>Logout</h3></a>
+<% @songs.each do |song| %>
+  <div class="message">
+   <h3><a href="/music/<%= song.id %>"><%= song.title %></a> <small>(by: <%= song.artist %>)</small></h3>  
+    <p>
+      <%= song.url %>
+    </p>
+  </div>
+<% end %>
+
+<a href="/music/new">Post a message... It's FREE (for now)!</a>
+
